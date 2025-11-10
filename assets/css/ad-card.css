@@ -1,0 +1,261 @@
+/* Ẩn tiêu đề mặc định của WordPress */
+.entry-title,
+h1.page-title,
+.wp-block-post-title {
+    display: none !important;
+}
+
+/* Reset cơ bản */
+body {
+    background: #F9F9F9 !important;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+/* Áp dụng border-box toàn plugin */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* ===== Layout chính ===== */
+.ad-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ad-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex: 1;
+    padding: 80px 20px;
+}
+
+.ad-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    white-space: nowrap;
+}
+
+.ad-subtitle {
+    font-size: 17px;
+    color: #555;
+    margin-bottom: 40px;
+    white-space: nowrap;
+}
+
+/* ===== Form ===== */
+.ad-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 45px 50px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.ad-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.ad-input {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.2s;
+}
+
+.ad-btn {
+    width: 100%;
+    background: #0057FF;
+    color: #fff;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.ad-btn:hover {
+    background: #0040CC;
+}
+
+/* ===== Lỗi inline ===== */
+.ad-error-inline {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #D93025;
+    font-size: 15px;
+    margin-top: 6px;
+}
+
+.ad-icon {
+    font-weight: bold;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 14px;
+    font-size: 12px;
+}
+
+/* ===== Thông báo ngoài form ===== */
+.ad-alert {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto 0;
+    padding: 18px 50px;
+    border-radius: 16px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.ad-alert--error {
+    background: #FDECEC;
+    color: #D93025;
+}
+
+.ad-alert--warning {
+    background: #FFF8E1;
+    color: #A67C00;
+}
+
+/* ===== Thông báo thành công ===== */
+.ad-alert--success {
+    background: #E8F5E9; /* nền xanh nhạt */
+    color: #1E7D34; /* chữ xanh đậm */
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1.5px solid rgba(30, 125, 52, 0.2);
+}
+
+/* Vùng chứa icon tròn xanh */
+.ad-alert--success .ad-alert__icon {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* SVG dấu tích trong vòng tròn */
+.ad-alert--success .ad-alert__icon svg {
+    width: 36px;
+    height: 36px;
+}
+
+/* Văn bản trong thông báo */
+.ad-alert--success .ad-alert__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ad-alert--success .ad-alert__title {
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0;
+    color: #1E7D34;
+}
+
+.ad-alert--success .ad-alert__sub {
+    font-size: 14px;
+    margin-top: 2px;
+    color: rgba(30, 125, 52, 0.8);
+}
+
+/* Responsive giữ nguyên style */
+@media (max-width: 768px) {
+    .ad-alert--success {
+        padding: 16px 30px;
+        gap: 10px;
+    }
+}
+
+
+/* ===== Footer ===== */
+.ad-footer {
+    background: #CFE9FF;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.ad-footer img {
+    height: 36px;
+}
+
+.ad-footer p {
+    margin: 0;
+    font-size: 14px;
+    color: #000;
+    font-weight: 500;
+}
+
+/* ===== Responsive ===== */
+@media (min-width: 1024px) {
+
+    .ad-title,
+    .ad-subtitle {
+        white-space: nowrap;
+    }
+
+    .ad-title {
+        font-size: 34px;
+    }
+
+    .ad-subtitle {
+        font-size: 18px;
+    }
+
+    .ad-form {
+        max-width: 600px;
+        padding: 60px 70px;
+    }
+
+    .ad-alert {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .ad-title,
+    .ad-subtitle {
+        white-space: normal;
+    }
+
+    .ad-form {
+        padding: 35px 25px;
+    }
+
+    .ad-footer {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+

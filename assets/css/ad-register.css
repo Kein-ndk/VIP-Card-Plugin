@@ -1,0 +1,189 @@
+/* Ẩn tiêu đề mặc định của WordPress */
+.entry-title,
+.wp-block-post-title {
+    display: none !important;
+}
+
+body {
+    background: #F9F9F9 !important;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Layout tổng */
+.ad-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ad-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.ad-title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.ad-subtitle {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Form chính */
+.ad-form {
+    width: 100%;
+    max-width: 720px;
+    /* ✅ mở rộng hơn trên PC */
+    background: #fff;
+    border-radius: 12px;
+    padding: 45px 60px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    text-align: left;
+    margin: 0 auto;
+}
+
+/* Input fields */
+.ad-input,
+.ad-radio,
+.ad-textarea {
+    width: 100%;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 15px;
+    outline: none;
+    transition: border-color .2s;
+}
+
+.ad-input:focus,
+.ad-textarea:focus {
+    border-color: #0057FF;
+}
+
+.ad-label {
+    display: block;
+    font-weight: 500;
+    margin-top: 14px;
+    margin-bottom: 6px;
+}
+
+.required-star {
+    color: #E53935;
+}
+
+/* Nhóm Ngày sinh + Giới tính */
+.ad-row {
+    display: flex;
+    gap: 20px;
+    align-items: flex-end;
+}
+
+.ad-row .ad-col {
+    flex: 1;
+}
+
+.ad-row .ad-col.half {
+    flex: 0.5;
+}
+
+/* Lỗi */
+.ad-error {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #E53935;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.ad-error::before {
+    content: "!";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    font-size: 12px;
+    line-height: 12px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Giới tính + dịch vụ */
+.ad-radio-group {
+    display: flex;
+    gap: 18px;
+    margin-top: 4px;
+}
+
+/* Nút */
+.ad-btn {
+    width: 100%;
+    margin-top: 30px;
+    background: #0057FF;
+    color: #fff;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .2s;
+}
+
+.ad-btn:hover {
+    background: #0040CC;
+}
+
+/* Footer */
+.ad-footer {
+    background: #CFE9FF;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.ad-footer img {
+    height: 36px;
+}
+
+.ad-footer p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+}
+
+@media(max-width:768px) {
+    .ad-form {
+        padding: 30px 25px;
+    }
+
+    .ad-footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .ad-row {
+        flex-direction: column;
+    }
+}
